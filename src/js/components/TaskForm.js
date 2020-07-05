@@ -31,11 +31,11 @@ class TaskForm extends React.Component{
 
     render() {
         return(
-            <form className="form-group" className="new-task" onSubmit={this.handleSubmit}>
-                <h2>What would you work on?</h2>
-                <input value={this.state.name} onChange={this.handleChange} type="text" className="form-control" id="name" name="title" placeholder="Task title" />
-                <input value={this.state.description} onChange={this.handleChange} type="text" className="form-control" id="description" name="description" placeholder="Task description"/>
-                <input type="submit" value="Add" className="btn btn-primary"/>
+            <form className="task-form" onSubmit={this.handleSubmit}>
+                <h2 className="task-form__title">What would you work on?</h2>
+                <input className="task-form__input task-form__input-name" value={this.state.name} onChange={this.handleChange} type="text"  id="name" name="title" placeholder="Task title" />
+                <input className="task-form__input task-form__input-description" value={this.state.description} onChange={this.handleChange} type="text" id="description" name="description" placeholder="Task description"/>
+                <input className="task-form__input-submit" type="submit" value="Add"/>
             </form>
         )
     }

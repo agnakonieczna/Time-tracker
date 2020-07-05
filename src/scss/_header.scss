@@ -19,6 +19,8 @@
     transition: 0.5s;
 
     &:hover {
-        color: #9487;
+        color: $main-color;
+        border: 0.1rem solid $main-color;
+        background-color: #6f3880;
     }
 }

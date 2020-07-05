@@ -24,15 +24,14 @@ class MainApp extends React.Component{
             tasks: temp
         })
 
-        const url = `http://localhost:3000/tasks/${id}`; // tu chciałabym zapisać do db.json dodana operacje
+        const url = `http://localhost:3000/tasks/${id}`; 
         fetch(url, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"},
             body: JSON.stringify(this.state.tasks.find(task => task.id === id))
         })
-            .then(resp => resp.json())
-            .then(resp => console.log(resp))
+            .then(resp => resp.json());
     }
 
     addTask = (task) => {
@@ -92,7 +91,7 @@ class MainApp extends React.Component{
                 task.operations.forEach(operation => {
                     if(operation.id===operationId) {
                         clearInterval(this.interval)
-                            task.timeSpent = task.operations.reduce((prev,curr) => { // tu chciałabym żeby te czasy sie sumowały
+                            task.timeSpent = task.operations.reduce((prev,curr) => { 
                             return prev + curr.timeSpent
                         }, 0)
                         
@@ -122,11 +121,13 @@ class MainApp extends React.Component{
 
     render() {
         return(
-            <div className="jumbotron container todo-app">
-                <HeaderApp />
+            <>
+            <HeaderApp />
+            <div className="container">
                 <TaskForm addTasks ={this.addTask}/>
                 <Tasks tasks = {this.state.tasks} onFinish={this.finishTask} start={this.startTimer} stop={this.stopTimer} add={this.addOperation}/>
             </div>
+            </>
         )
     }
 }
