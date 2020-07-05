@@ -12,7 +12,7 @@
     height: 30rem;
     grid-column: 1/2;
     grid-row: 1/2;
-    margin: 2rem 0;
+    margin: 2rem 2rem;
 }
 
 .section-1 .section__content {
@@ -28,7 +28,7 @@
     height: 30rem;
     grid-column: 2/3;
     grid-row: 1/2;
-    margin: 2rem 0;
+    margin: 2rem 2rem;
 }
 
 .section-2 .section__content {
@@ -44,7 +44,7 @@
     height: 30rem;
     grid-column: 1/2;
     grid-row: 1/2;
-    margin: 2rem 0;
+    margin: 2rem 2rem;
 }
 
 .section-3 .section__content {
@@ -56,3 +56,10 @@
     align-items: center;
 }
 
+.section-1, .section-2, .section-3, .section__content {
+    font-size: 3rem;
+}
+
+.section-1, .section-2, .section-3, .section__content p {
+    font-size: 2rem;
+}

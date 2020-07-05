@@ -65,10 +65,13 @@ class MainApp extends React.Component{
 
     startTimer = (taskId, operationId) => {
         let tempArr = [...this.state.tasks]
+
         
         tempArr.forEach(task => {
             if(task.id === taskId) {
                 task.operations.forEach(operation => {
+                    console.log(operation.timeSpent)
+
                     if(operation.id === operationId) {
                         this.interval = setInterval(() => {
                             console.log(this.state.timeSpent)
@@ -117,6 +120,15 @@ class MainApp extends React.Component{
         this.setState({
             tasks: tempArr
         })
+
+        const url = `http://localhost:3000/tasks/${id}`; 
+        fetch(url, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"},
+            body: JSON.stringify(this.state.tasks.find(task => task.id === id))
+        })
+            .then(resp => resp.json());
     }
 
     render() {

@@ -8,19 +8,24 @@ export default class Task extends React.Component{
         this.state = {
             buttonText: "Start timer",
             clicked: 0,
-            isClicked: false
+            isClicked: false,
+            disabled: false,
+            btnText: "Add operation"
         }
     }
 
     addOperationForm = (e) => {
         e.preventDefault()
         this.setState({
-            isClicked: this.state.isClicked === false ? true : false 
+            isClicked: this.state.isClicked === false ? true : false,
         })
     }
 
-    handleClick = (e) => {
+    handleFinish = (e) => {
         e.preventDefault()
+        this.setState({
+            disabled: true
+        })
         this.props.onFinish(this.props.task.id)
     }
 
@@ -39,11 +44,12 @@ export default class Task extends React.Component{
 
     render() {
         return(
-            <li className={this.props.task.status==="closed" ? "task-description list-group-item-success" : "list-group-item active task-description"}style={{margin: "30px", listStyle:"none"}}>
-                <h2>{this.props.task.name}</h2>
-                <p>{this.props.task.description}</p>
-                <a href="Finish task" style={{marginTop:"-60px"}} onClick={this.handleClick}>Finish</a>
-                <a href="Add operation"  style={{marginTop:"-20px"}} onClick = {this.addOperationForm}>Add Operation</a>
+            <li className={this.props.task.status==="closed" ? "task-list__task task-success" : "task-list__task"}>
+                <h1 className="task-list__task-name">{this.props.task.name}</h1>
+                <p className="task-list__task-description">{this.props.task.description}</p>
+                <p className="task-list__task-time">{this.props.task.timeSpent} s</p>
+                <button className="task-list__task-btn task-list__task-btn-finish" onClick={this.handleFinish} disabled={this.state.disabled}>Finish</button>
+                <button className="task-list__task-btn task-list__task-btn-add" onClick = {this.addOperationForm} disabled={this.state.disabled}>{this.state.isClicked ? "Hide operation" : "Add operation"}</button>
                 {this.state.isClicked && <OperationForm addOperation={this.props.add} id={this.props.task.id}/>}
                 <Operations operations = {this.props.task.operations} start={this.props.start} stop={this.props.stop} id={this.props.task.id}/>
             </li>

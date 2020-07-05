@@ -27,9 +27,9 @@ class OperationForm extends React.Component {
 
     render() {
         return (
-        <form onSubmit={this.handleSubmit}>
-            <input value={this.state.name} onChange={this.handleChange} type="text" className="form-control" id="name" name="title" placeholder="Operation title"/>
-            <input type="submit" value="Add" className="btn btn-primary"/>
+        <form onSubmit={this.handleSubmit} className="operation-form">
+            <input className="operation-form__input-name" value={this.state.name} onChange={this.handleChange} type="text" id="name" name="title" placeholder="Operation title"/>
+            <input className="operation-form__input-submit" type="submit" value="Add"/>
         </form>
         )
     }

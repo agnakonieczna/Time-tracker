@@ -1,17 +1,19 @@
-.task-form {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    margin: 1rem 1rem;
-    display: flex;
-    flex-direction: column;
+.operation-form {
+    margin-top: 1.5rem;
 }
 
-.task-form__title {
-    font-size: 1.8rem;
+.operation-form__input-name {
+    border: none;
+    border-bottom: 1px solid #000;
+    height: 2rem;
+    width: 50%;
+
     margin-bottom: 1rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
 }
 
-.task-form__input {
+.operation-form__input-submit {
     border: none;
     border-bottom: 1px solid #000;
     height: 2rem;

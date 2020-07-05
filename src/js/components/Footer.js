@@ -3,7 +3,7 @@ import React from "react";
 class Footer extends React.Component {
     render() {
         return (
-            <footer className="footer">Copyright by</footer>
+            <footer className="footer">Copyright by timetracker.com</footer>
         )
     }
 }

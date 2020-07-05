@@ -26,10 +26,10 @@ class Operation extends React.Component {
 
     render() {
         return (
-            <li className="list-group-item active task-description">
-                <h3>{this.props.operation.name}</h3>
-                <h5>{this.props.operation.timeSpent}</h5>
-                <a href="start-timer" onClick={this.startTimer}>{this.state.buttonText}</a>
+            <li className="operation">
+                <h3 className="operation__title">{this.props.operation.name}</h3>
+                <h5 className="operation__time">{this.props.operation.timeSpent}</h5>
+                <a className="operation__btn" href="start-timer" onClick={this.startTimer}>{this.state.buttonText}</a>
             </li>
         )
     }

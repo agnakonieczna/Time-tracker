@@ -19,6 +19,12 @@ class TaskForm extends React.Component{
 
     handleSubmit = (e) => {
         e.preventDefault();
+        
+        this.setState({
+            name: "",
+            description: ""
+        })
+
         this.props.addTasks({
             id: uniqid(),
             name: this.state.name,
