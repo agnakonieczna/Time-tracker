@@ -1,0 +1,42 @@
+{
+    "tasks": [
+      {
+        "id": 1,
+        "name": "Learn Redux",
+        "description": "Understand global state",
+        "status": "open",
+        "timeSpent": 0,
+        "operations": [
+          {
+            "id": "ka6nq3os",
+            "name": "Operation1",
+            "timeSpent": 0
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Learn Redux",
+        "description": "Understand global state",
+        "status": "open",
+        "timeSpent": 0,
+        "operations": []
+      },
+      {
+        "id": "ka52bcns",
+        "name": "Task1",
+        "description": "Zrozumiec this w eventach",
+        "status": "open",
+        "timeSpent": 0,
+        "operations": []
+      },
+      {
+        "id": "ka6lbu1a",
+        "name": "Task1",
+        "description": "Zrozumiec this w eventach",
+        "status": "open",
+        "timeSpent": 0,
+        "operations": []
+      }
+    ]
+  }
