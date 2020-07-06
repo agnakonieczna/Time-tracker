@@ -8,7 +8,8 @@ class MainApp extends React.Component{
     constructor(props) {
         super(props)
         this.state = {
-            tasks: []
+            tasks: [],
+            timeSpent: 0
         }
     }
 
@@ -67,16 +68,15 @@ class MainApp extends React.Component{
     startTimer = (taskId, operationId) => {
         let tempArr = [...this.state.tasks]
 
-        
         tempArr.forEach(task => {
             if(task.id === taskId) {
                 task.operations.forEach(operation => {
-                    console.log(operation.timeSpent)
-
                     if(operation.id === operationId) {
                         this.interval = setInterval(() => {
-                            console.log(this.state.tasks)
                             operation.timeSpent++
+                            this.setState({
+                                timeSpent: this.state.timeSpent + 1
+                            })
                         }, 1000) 
                     }
                 })
@@ -107,6 +107,15 @@ class MainApp extends React.Component{
         this.setState({
             tasks: tempArr
         })
+
+        const url = `http://localhost:3000/tasks/${taskId}`; 
+        fetch(url, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"},
+            body: JSON.stringify(this.state.tasks.find(task => task.id === taskId))
+        })
+            .then(resp => resp.json());
 
     }
 

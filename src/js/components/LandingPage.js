@@ -14,22 +14,22 @@ class LandingPage extends React.Component {
                 id: 1,
                 img: img1,
                 alt: "Computer working girl",
-                title: "Title-1",
-                text: "Text-1"
+                title: "Count your work time",
+                text: "Time tracker helps you count how much time you spend on each task. Remember about breaks!"
             },
             {
                 id: 2,
                 img: img2,
                 alt: "Time management",
-                title: "Title-2",
-                text: "Text-2"
+                title: "Save tasks to do",
+                text: "With time tracker you won't miss any important task to do. Manage your work time like a pro."
             },
             {
                 id: 3,
                 img: img3,
                 alt: "Timeline",
-                title: "Title-3",
-                text: "Text-3"
+                title: "Add operations to tasks",
+                text: "Did you know that in time tracker tasks can be divided into... smaller tasks? Divide your tasks into operations, so you can faster see progress!"
             }  
             ]
         }

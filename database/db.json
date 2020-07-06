@@ -5,17 +5,17 @@
       "name": "Learn Redux",
       "description": "Understand global state",
       "status": "open",
-      "timeSpent": 3,
+      "timeSpent": 63,
       "operations": [
         {
           "id": "ka6nq3os",
           "name": "Operation1",
-          "timeSpent": 2
+          "timeSpent": 42
         },
         {
           "id": "kcas5ukg",
           "name": "Operation1",
-          "timeSpent": 1
+          "timeSpent": 21
         }
       ]
     },
@@ -24,17 +24,17 @@
       "name": "Learn Redux",
       "description": "Understand global state",
       "status": "open",
-      "timeSpent": 8,
+      "timeSpent": 28,
       "operations": [
         {
           "id": "kcasgc8r",
           "name": "Operation1",
-          "timeSpent": 8
+          "timeSpent": 17
         },
         {
           "id": "kcasgwaf",
           "name": "Operation2",
-          "timeSpent": 0
+          "timeSpent": 11
         }
       ]
     }
