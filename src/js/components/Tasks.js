@@ -4,7 +4,6 @@ import Task from "./Task";
 export default
 class Tasks extends React.Component{
     render() {
-        console.log(this.props)
         return(
             <ul className="tasks-list">
                 {this.props.tasks.map(task => {

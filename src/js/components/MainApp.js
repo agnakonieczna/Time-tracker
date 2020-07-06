@@ -14,6 +14,7 @@ class MainApp extends React.Component{
 
     addOperation = (id, operation) => {
         let temp = [...this.state.tasks]
+
         temp.forEach(task => {
             if(task.id === id) {
                 task.operations.push(operation)
@@ -41,9 +42,9 @@ class MainApp extends React.Component{
         this.setState({
             tasks: temp
         })
-        
-        const url = "http://localhost:3000/tasks";
-        fetch(url, {
+
+        const urlTasks = "http://localhost:3000/tasks"; 
+        fetch(urlTasks, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"},
@@ -53,13 +54,13 @@ class MainApp extends React.Component{
     }
 
     componentDidMount() {
-        const url = "http://localhost:3000/tasks";
-        fetch(url)
-            .then(resp => resp.json())
-            .then(data => {
-                this.setState({
-                    tasks: [...this.state.tasks, ...data]
-                })
+        const urlTasks = "http://localhost:3000/tasks"; 
+        fetch(urlTasks)
+        .then(resp => resp.json())
+        .then(data => {
+            this.setState({
+                tasks: [...this.state.tasks, ...data]
+            })
         })
     }
 
@@ -74,7 +75,7 @@ class MainApp extends React.Component{
 
                     if(operation.id === operationId) {
                         this.interval = setInterval(() => {
-                            console.log(this.state.timeSpent)
+                            console.log(this.state.tasks)
                             operation.timeSpent++
                         }, 1000) 
                     }

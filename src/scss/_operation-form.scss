@@ -7,22 +7,17 @@
     border-bottom: 1px solid #000;
     height: 2rem;
     width: 50%;
-
     margin-bottom: 1rem;
+    margin-right: 1rem;
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
+    background-color: transparent;
+    outline: none;
 }
+
+
 
 .operation-form__input-submit {
-    border: none;
-    border-bottom: 1px solid #000;
-    height: 2rem;
-    margin-bottom: 1rem;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1rem;
-}
-
-.task-form__input-submit {
     font-family: 'Raleway', sans-serif;
     background-color: #fff;
     color: #000;
@@ -34,7 +29,6 @@
     transition: 0.3s;
     align-self: flex-end;
     outline: none;
-    font-size: 1rem;
 
     &:hover {
         font-weight: bold;

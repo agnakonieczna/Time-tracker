@@ -28,7 +28,7 @@ class Operation extends React.Component {
         return (
             <li className="operation">
                 <h3 className="operation__title">{this.props.operation.name}</h3>
-                <h5 className="operation__time">{this.props.operation.timeSpent}</h5>
+                <span className="operation__time">{this.props.operation.timeSpent} s</span>
                 <a className="operation__btn" href="start-timer" onClick={this.startTimer}>{this.state.buttonText}</a>
             </li>
         )
