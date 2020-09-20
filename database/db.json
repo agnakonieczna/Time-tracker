@@ -5,17 +5,17 @@
       "name": "Learn Redux",
       "description": "Understand global state",
       "status": "open",
-      "timeSpent": 63,
+      "timeSpent": 71,
       "operations": [
         {
           "id": "ka6nq3os",
           "name": "Operation1",
-          "timeSpent": 42
+          "timeSpent": 46
         },
         {
           "id": "kcas5ukg",
           "name": "Operation1",
-          "timeSpent": 21
+          "timeSpent": 25
         }
       ]
     },
@@ -35,6 +35,33 @@
           "id": "kcasgwaf",
           "name": "Operation2",
           "timeSpent": 11
+        }
+      ]
+    },
+    {
+      "id": "kcbnlluv",
+      "name": "Task1",
+      "description": "Zrozumiec this w eventach",
+      "status": "closed",
+      "timeSpent": 0,
+      "operations": []
+    },
+    {
+      "id": "kcbnlusy",
+      "name": "Task1",
+      "description": "Zrozumiec this w eventach",
+      "status": "open",
+      "timeSpent": 24,
+      "operations": [
+        {
+          "id": "kcbnlzxj",
+          "name": "Operation1",
+          "timeSpent": 18
+        },
+        {
+          "id": "kcbnmd7m",
+          "name": "Operation2",
+          "timeSpent": 6
         }
       ]
     }
